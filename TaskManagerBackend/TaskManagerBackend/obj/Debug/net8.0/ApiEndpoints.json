@@ -1,0 +1,178 @@
+[
+  {
+    "ContainingType": "TaskManagerBackend.Controllers.ProjectController",
+    "Method": "CreateProject",
+    "RelativePath": "api/Project/CreateProject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "prj",
+        "Type": "TaskManagerBackend.Models.ProjectSchema",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TaskManagerBackend.Errors.ApiResponse\u00601[[TaskManagerBackend.DTO.ProjectCreationDetailsDTO, TaskManagerBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TaskManagerBackend.Controllers.ProjectController",
+    "Method": "GetAllProjectDeatails",
+    "RelativePath": "api/Project/GetAllProjectDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TaskManagerBackend.Errors.ApiResponse\u00601[[System.Collections.Generic.List\u00601[[TaskManagerBackend.Models.ProjectSchema, TaskManagerBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TaskManagerBackend.Controllers.ProjectController",
+    "Method": "GetProjectDetails",
+    "RelativePath": "api/Project/GetProjectDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "projectId",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TaskManagerBackend.Errors.ApiResponse\u00601[[TaskManagerBackend.Models.ProjectSchema, TaskManagerBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TaskManagerBackend.Controllers.UserController",
+    "Method": "GetAllUserAsync",
+    "RelativePath": "api/User/GetAllUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[TaskManagerBackend.Models.UserSchema, TaskManagerBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TaskManagerBackend.Controllers.UserController",
+    "Method": "GetUserasync",
+    "RelativePath": "api/User/GetUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TaskManagerBackend.Errors.ApiResponse\u00601[[TaskManagerBackend.DTO.UserDetailsDTO, TaskManagerBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TaskManagerBackend.Controllers.UserController",
+    "Method": "LoginUser",
+    "RelativePath": "api/User/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "TaskManagerBackend.DTO.UserLoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TaskManagerBackend.Errors.ApiResponse\u00601[[TaskManagerBackend.DTO.UserDetailsDTO, TaskManagerBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TaskManagerBackend.Controllers.UserController",
+    "Method": "RegisterUser",
+    "RelativePath": "api/User/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "TaskManagerBackend.Models.UserSchema",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TaskManagerBackend.Errors.ApiResponse\u00601[[TaskManagerBackend.DTO.UserDetailsDTO, TaskManagerBackend, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
