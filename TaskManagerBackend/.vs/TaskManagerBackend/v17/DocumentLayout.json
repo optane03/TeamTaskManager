@@ -1,61 +1,61 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\",
+  "WorkspaceRootPath": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\teamtaskmanager\\taskmanagerbackend\\taskmanagerbackend\\services\\projectservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\services\\projectservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\teamtaskmanager\\taskmanagerbackend\\taskmanagerbackend\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\teamtaskmanager\\taskmanagerbackend\\taskmanagerbackend\\models\\projectschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\models\\projectschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\teamtaskmanager\\taskmanagerbackend\\taskmanagerbackend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\teamtaskmanager\\taskmanagerbackend\\taskmanagerbackend\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\teamtaskmanager\\taskmanagerbackend\\taskmanagerbackend\\dto\\userdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\dto\\userdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\teamtaskmanager\\taskmanagerbackend\\taskmanagerbackend\\responses\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\responses\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\teamtaskmanager\\taskmanagerbackend\\taskmanagerbackend\\services\\jwtservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\services\\jwtservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\teamtaskmanager\\taskmanagerbackend\\taskmanagerbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\teamtaskmanager\\taskmanagerbackend\\taskmanagerbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\teamtaskmanager\\taskmanagerbackend\\taskmanagerbackend\\taskmanagerbackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\taskmanagerbackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\teamtaskmanager\\taskmanagerbackend\\taskmanagerbackend\\dto\\projectcreationdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\taskmanager\\taskmanagerbackend\\taskmanagerbackend\\dto\\projectcreationdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\dto\\projectcreationdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\teamtaskmanager\\taskmanagerbackend\\taskmanagerbackend\\models\\userschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\taskmanager\\taskmanagerbackend\\taskmanagerbackend\\services\\projectservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\services\\projectservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\taskmanager\\taskmanagerbackend\\taskmanagerbackend\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\taskmanager\\taskmanagerbackend\\taskmanagerbackend\\models\\projectschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\models\\projectschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\taskmanager\\taskmanagerbackend\\taskmanagerbackend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\taskmanager\\taskmanagerbackend\\taskmanagerbackend\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\taskmanager\\taskmanagerbackend\\taskmanagerbackend\\dto\\userdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\dto\\userdetailsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\taskmanager\\taskmanagerbackend\\taskmanagerbackend\\responses\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\responses\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\taskmanager\\taskmanagerbackend\\taskmanagerbackend\\services\\jwtservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\services\\jwtservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\taskmanager\\taskmanagerbackend\\taskmanagerbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\taskmanager\\taskmanagerbackend\\taskmanagerbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\taskmanager\\taskmanagerbackend\\taskmanagerbackend\\taskmanagerbackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\taskmanagerbackend.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\taskmanager\\taskmanagerbackend\\taskmanagerbackend\\models\\userschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\models\\userschema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\teamtaskmanager\\taskmanagerbackend\\taskmanagerbackend\\models\\databasesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|c:\\users\\tanay\\onedrive\\desktop\\taskmanager\\taskmanagerbackend\\taskmanagerbackend\\models\\databasesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2E94D43-2804-48F1-9A89-7980F8799B9B}|TaskManagerBackend\\TaskManagerBackend.csproj|solutionrelative:taskmanagerbackend\\models\\databasesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -66,15 +66,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ProjectServices.cs",
-              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Services\\ProjectServices.cs",
+              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Services\\ProjectServices.cs",
               "RelativeDocumentMoniker": "TaskManagerBackend\\Services\\ProjectServices.cs",
-              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Services\\ProjectServices.cs",
+              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Services\\ProjectServices.cs",
               "RelativeToolTip": "TaskManagerBackend\\Services\\ProjectServices.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAB0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -83,36 +83,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserServices.cs",
-              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Services\\UserServices.cs",
-              "RelativeDocumentMoniker": "TaskManagerBackend\\Services\\UserServices.cs",
-              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Services\\UserServices.cs",
-              "RelativeToolTip": "TaskManagerBackend\\Services\\UserServices.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAgwEMAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T10:14:09.992Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "TaskManagerBackend\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Controllers\\UserController.cs",
-              "RelativeToolTip": "TaskManagerBackend\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-28T11:17:28.133Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\appsettings.json",
               "RelativeDocumentMoniker": "TaskManagerBackend\\appsettings.json",
-              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\appsettings.json",
+              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\appsettings.json",
               "RelativeToolTip": "TaskManagerBackend\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -120,11 +95,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Program.cs",
               "RelativeDocumentMoniker": "TaskManagerBackend\\Program.cs",
-              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Program.cs",
+              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Program.cs",
               "RelativeToolTip": "TaskManagerBackend\\Program.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAACUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -132,11 +107,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "UserDetailsDTO.cs",
-              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\DTO\\UserDetailsDTO.cs",
+              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\DTO\\UserDetailsDTO.cs",
               "RelativeDocumentMoniker": "TaskManagerBackend\\DTO\\UserDetailsDTO.cs",
-              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\DTO\\UserDetailsDTO.cs",
+              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\DTO\\UserDetailsDTO.cs",
               "RelativeToolTip": "TaskManagerBackend\\DTO\\UserDetailsDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -144,11 +119,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ApiResponse.cs",
-              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Responses\\ApiResponse.cs",
+              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Responses\\ApiResponse.cs",
               "RelativeDocumentMoniker": "TaskManagerBackend\\Responses\\ApiResponse.cs",
-              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Responses\\ApiResponse.cs",
+              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Responses\\ApiResponse.cs",
               "RelativeToolTip": "TaskManagerBackend\\Responses\\ApiResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -156,37 +131,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ProjectSchema.cs",
-              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Models\\ProjectSchema.cs",
+              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Models\\ProjectSchema.cs",
               "RelativeDocumentMoniker": "TaskManagerBackend\\Models\\ProjectSchema.cs",
-              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Models\\ProjectSchema.cs",
+              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Models\\ProjectSchema.cs",
               "RelativeToolTip": "TaskManagerBackend\\Models\\ProjectSchema.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T18:40:25.14Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-08T18:40:25.14Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ProjectController.cs",
-              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Controllers\\ProjectController.cs",
+              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Controllers\\ProjectController.cs",
               "RelativeDocumentMoniker": "TaskManagerBackend\\Controllers\\ProjectController.cs",
-              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Controllers\\ProjectController.cs",
+              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Controllers\\ProjectController.cs",
               "RelativeToolTip": "TaskManagerBackend\\Controllers\\ProjectController.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAYwCcAAABuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-09T18:04:53.034Z",
+              "WhenOpened": "2026-04-09T18:04:53.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProjectCreationDetailsDTO.cs",
+              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\DTO\\ProjectCreationDetailsDTO.cs",
+              "RelativeDocumentMoniker": "TaskManagerBackend\\DTO\\ProjectCreationDetailsDTO.cs",
+              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\DTO\\ProjectCreationDetailsDTO.cs",
+              "RelativeToolTip": "TaskManagerBackend\\DTO\\ProjectCreationDetailsDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-08T19:19:46.652Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "TaskManagerBackend\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Controllers\\UserController.cs",
+              "RelativeToolTip": "TaskManagerBackend\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T11:17:28.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserServices.cs",
+              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Services\\UserServices.cs",
+              "RelativeDocumentMoniker": "TaskManagerBackend\\Services\\UserServices.cs",
+              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Services\\UserServices.cs",
+              "RelativeToolTip": "TaskManagerBackend\\Services\\UserServices.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAgwEMAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T10:14:09.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "JWTservices.cs",
-              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Services\\JWTservices.cs",
+              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Services\\JWTservices.cs",
               "RelativeDocumentMoniker": "TaskManagerBackend\\Services\\JWTservices.cs",
-              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Services\\JWTservices.cs",
+              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Services\\JWTservices.cs",
               "RelativeToolTip": "TaskManagerBackend\\Services\\JWTservices.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwC4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -194,11 +204,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "TaskManagerBackend.csproj",
-              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\TaskManagerBackend.csproj",
+              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\TaskManagerBackend.csproj",
               "RelativeDocumentMoniker": "TaskManagerBackend\\TaskManagerBackend.csproj",
-              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\TaskManagerBackend.csproj",
+              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\TaskManagerBackend.csproj",
               "RelativeToolTip": "TaskManagerBackend\\TaskManagerBackend.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -206,23 +216,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ProjectCreationDetailsDTO.cs",
-              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\DTO\\ProjectCreationDetailsDTO.cs",
-              "RelativeDocumentMoniker": "TaskManagerBackend\\DTO\\ProjectCreationDetailsDTO.cs",
-              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\DTO\\ProjectCreationDetailsDTO.cs",
-              "RelativeToolTip": "TaskManagerBackend\\DTO\\ProjectCreationDetailsDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-08T19:19:46.652Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 12,
               "Title": "UserSchema.cs",
-              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Models\\UserSchema.cs",
+              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Models\\UserSchema.cs",
               "RelativeDocumentMoniker": "TaskManagerBackend\\Models\\UserSchema.cs",
-              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Models\\UserSchema.cs",
+              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Models\\UserSchema.cs",
               "RelativeToolTip": "TaskManagerBackend\\Models\\UserSchema.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -232,9 +230,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "DatabaseSettings.cs",
-              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Models\\DatabaseSettings.cs",
+              "DocumentMoniker": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Models\\DatabaseSettings.cs",
               "RelativeDocumentMoniker": "TaskManagerBackend\\Models\\DatabaseSettings.cs",
-              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\Models\\DatabaseSettings.cs",
+              "ToolTip": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\Models\\DatabaseSettings.cs",
               "RelativeToolTip": "TaskManagerBackend\\Models\\DatabaseSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

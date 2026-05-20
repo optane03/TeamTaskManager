@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\TaskManagerBackend.csproj": {}
+    "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\TaskManagerBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\TaskManagerBackend.csproj": {
+    "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\TaskManagerBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\TaskManagerBackend.csproj",
+        "projectUniqueName": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\TaskManagerBackend.csproj",
         "projectName": "TaskManagerBackend",
-        "projectPath": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\TaskManagerBackend.csproj",
+        "projectPath": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\TaskManagerBackend.csproj",
         "packagesPath": "C:\\Users\\tanay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tanay\\OneDrive\\Desktop\\TeamTaskManager\\TaskManagerBackend\\TaskManagerBackend\\obj\\",
+        "outputPath": "C:\\Users\\tanay\\OneDrive\\Desktop\\TaskManager\\TaskManagerBackend\\TaskManagerBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
