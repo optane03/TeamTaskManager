@@ -7,13 +7,13 @@ type Props = {
 }
 
 export default function ProtectedRoute({ children, allowedRoles }: Props) {
-    const role = sessionStorage.getItem("token"); 
+    const token = sessionStorage.getItem("token"); 
 
-    if(role == null){
+    if(token == null){
         return <Navigate to="/login" />;
     }
 
-    const payload = JSON.parse(atob(role.split(".")[1]));
+    const payload = JSON.parse(atob(token.split(".")[1]));
     const userRole = payload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
 
     if (allowedRoles && !allowedRoles.includes(userRole)) {

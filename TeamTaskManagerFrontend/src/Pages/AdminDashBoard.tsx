@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import dlt from "../Pictures/recycle-bin.png";
+import home from "../Pictures/home-button.png";
+import logout from "../Pictures/exit.png";
 
 interface Projects {
   id: string;
@@ -48,7 +50,7 @@ const AdminDashBoard = () => {
     const token = sessionStorage.getItem("token");
 
     if (!token) {
-      navigate("/login");
+      navigate("/");
     }
 
     const payload = JSON.parse(atob(token!.split(".")[1]));
@@ -59,13 +61,20 @@ const AdminDashBoard = () => {
     fetchUser(email);
   }, []);
 
+
   return (
     <div className="flex w-full h-screen">
-      <div className="w-1/4 h-full bg-[#1A1953]">
+      <div className="w-1/4 bg-[#1A1953] ">
         <h1 className="text-2xl font-bold text-left px-5 py-3 m-3 text-white bg-[#141343] rounded-2xl">Dashboard</h1>
       </div>
       <div className="w-full h-full p-3 bg-blue-50">
-        <h1 className="text-4xl font-bold text-left p-2 rounded-xl">Hi, {user?.userName || "User"}</h1>
+        <div className="flex items-center justify-between">
+          <h1 className="text-4xl font-bold text-left p-2 rounded-xl">Hi, {user?.userName || "User"}</h1>
+          <div className="flex gap-3">
+            <img src={logout} alt="Logout" onClick={() => { sessionStorage.removeItem('token'); navigate("/"); }} className="cursor-pointer h-10 w-10" />
+            <img src={home} alt="Home" onClick={() => { navigate("/") }} className="cursor-pointer h-10 w-10" />
+          </div>
+        </div>
 
         {/* Projects Table */}
         <div className="bg-white rounded-xl mt-3 border border-gray-300">
@@ -94,7 +103,7 @@ const AdminDashBoard = () => {
               </thead>
 
               <tbody>
-                {allProjects.length > 0? allProjects.map((project) => (
+                {allProjects.length > 0 ? allProjects.map((project) => (
                   <tr key={project.id} className="">
                     <td className="px-6 py-2">{project.projectName}</td>
                     <td className="px-6 py-2">{project.projectStatus}</td>
