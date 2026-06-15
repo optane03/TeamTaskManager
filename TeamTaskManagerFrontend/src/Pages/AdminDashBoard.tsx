@@ -19,10 +19,16 @@ interface User {
   roll: string;
 }
 
+enum DashBoardcontent {
+  Projects,
+  TeamMembers
+}
+
 const AdminDashBoard = () => {
   const navigate = useNavigate();
   const [allProjects, setAllProjects] = useState<Projects[]>([]);
   const [user, setUser] = useState<User>();
+  const [dashboardContent, setDashboardContent] = useState<DashBoardcontent>(DashBoardcontent.Projects);
 
   const fetchProjects = async (email: string) => {
     const projectUrl = `http://localhost:5089/api/Project/GetAllProjectDetails?email=${email}`;
@@ -64,9 +70,22 @@ const AdminDashBoard = () => {
 
   return (
     <div className="flex w-full h-screen">
+      {/* Sidebar */}
       <div className="w-1/4 bg-[#1A1953] ">
-        <h1 className="text-2xl font-bold text-left px-5 py-3 m-3 text-white bg-[#141343] rounded-2xl">Dashboard</h1>
+        <h1 className="text-3xl font-bold text-left px-5 py-3 m-3 text-white bg-[#141343] rounded-2xl">Dashboard</h1>
+        <div
+          className={`cursor-pointer text-xl px-5 py-2 m-3 mt-5 text-white hover:bg-[#141343] rounded-full text-left ${dashboardContent === DashBoardcontent.Projects ? 'bg-[#141343] border-r-2 border-yellow-300' : ''}`}
+          onClick={() => setDashboardContent(DashBoardcontent.Projects)}>
+          <h1>Projects</h1>
+        </div>
+        <div 
+          className={`cursor-pointer text-xl px-5 py-2 m-3 mt-2 text-white hover:bg-[#141343] rounded-full text-left ${dashboardContent === DashBoardcontent.TeamMembers ? 'bg-[#141343] border-r-2 border-yellow-300' : ''}`}
+          onClick={() => setDashboardContent(DashBoardcontent.TeamMembers)}>
+          <h1>Team Members</h1>
+        </div>
       </div>
+
+      {/* Main Content */}
       <div className="w-full h-full p-3 bg-blue-50">
         <div className="flex items-center justify-between">
           <h1 className="text-4xl font-bold text-left p-2 rounded-xl">Hi, {user?.userName || "User"}</h1>
