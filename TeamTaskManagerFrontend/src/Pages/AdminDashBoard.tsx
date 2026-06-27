@@ -17,6 +17,15 @@ interface User {
   userName: string;
   userEmail: string;
   roll: string;
+  organizationId: string;
+}
+
+interface AllEmployees {
+  id: string;
+  userName: string;
+  userEmail: string;
+  roll: string;
+  organizationId: string;
 }
 
 enum DashBoardcontent {
@@ -28,6 +37,7 @@ const AdminDashBoard = () => {
   const navigate = useNavigate();
   const [allProjects, setAllProjects] = useState<Projects[]>([]);
   const [user, setUser] = useState<User>();
+  const [allEmployees, setAllEmployees] = useState<AllEmployees[]>([]);
   const [dashboardContent, setDashboardContent] = useState<DashBoardcontent>(DashBoardcontent.Projects);
 
   const fetchProjects = async (email: string) => {
@@ -45,12 +55,24 @@ const AdminDashBoard = () => {
     const userData: User = {
       userName: userResponse.data.data.userName,
       userEmail: userResponse.data.data.userEmail,
-      roll: userResponse.data.data.roll
+      roll: userResponse.data.data.roll,
+      organizationId: userResponse.data.data.organizationId
     };
 
     setUser(userData);
+    console.log(userData.organizationId);
+    fetchAllEmployees(userData.organizationId);
   };
 
+  const fetchAllEmployees = async (organizationId: string) => {
+    const employeesUrl = `http://localhost:5089/api/User/GetAllUser?organizationId=${organizationId}`;
+    const employeesResponse = await axios.get(employeesUrl);
+
+    setAllEmployees(employeesResponse.data.data);
+    console.log("printing all employees:");
+    
+    console.log(employeesResponse.data);
+  };
 
   useEffect(() => {
     const token = sessionStorage.getItem("token");
@@ -78,7 +100,7 @@ const AdminDashBoard = () => {
           onClick={() => setDashboardContent(DashBoardcontent.Projects)}>
           <h1>Projects</h1>
         </div>
-        <div 
+        <div
           className={`cursor-pointer text-xl px-5 py-2 m-3 mt-2 text-white hover:bg-[#141343] rounded-full text-left ${dashboardContent === DashBoardcontent.TeamMembers ? 'bg-[#141343] border-r-2 border-yellow-300' : ''}`}
           onClick={() => setDashboardContent(DashBoardcontent.TeamMembers)}>
           <h1>Team Members</h1>

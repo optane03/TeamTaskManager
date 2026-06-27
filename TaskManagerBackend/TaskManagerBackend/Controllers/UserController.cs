@@ -19,9 +19,9 @@ namespace TaskManagerBackend.Controllers
 
 
         [HttpGet("GetAllUser")]
-        public async Task<List<UserSchema>> GetAllUserAsync()
+        public async Task<List<UserSchema>> GetAllUserAsync(string organizationId)
         {
-            return await userServices.GetAllUserInfoAsync();
+            return await userServices.GetAllUserInfoAsync(organizationId);
         }
 
 

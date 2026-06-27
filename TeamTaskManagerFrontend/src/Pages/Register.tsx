@@ -10,14 +10,16 @@ interface RegisterProps {
     userName: string,
     userEmail: string,
     userPassword: string,
-    role: string
+    role: string,
+    organizationId: string
 }
 
 const defaultRegisterProps: RegisterProps = {
     userName: "",
     userEmail: "",
     userPassword: "",
-    role: ""
+    role: "",
+    organizationId: "Company@123"
 }
 
 const Register = () => {
@@ -33,6 +35,7 @@ const Register = () => {
     }, [])
 
     const handleRegister = async (values: RegisterProps) => {
+        console.log(values);
         const response = await axios.post(Url + "User/Register", values);
 
         if (response.data.statusCode === 403 || response.data.statusCode === 404 || response.data.statusCode === 400) {

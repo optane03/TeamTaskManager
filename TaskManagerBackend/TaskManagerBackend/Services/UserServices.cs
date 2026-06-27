@@ -20,9 +20,9 @@ namespace TaskManagerBackend.Services
 
 
         // Service to get all the member
-        public async Task<List<UserSchema>> GetAllUserInfoAsync()
+        public async Task<List<UserSchema>> GetAllUserInfoAsync(string organizationId)
         {
-            return await userSchema.Find(all => all.Role == "Developer").ToListAsync();    
+            return await userSchema.Find(all => all.Role == "Member" && all.OrganizationId == organizationId).ToListAsync();    
         }
 
 
@@ -58,6 +58,7 @@ namespace TaskManagerBackend.Services
             response.Data.UserName = user.UserName;
             response.Data.UserEmail = user.UserEmail;
             response.Data.Role = user.Role;
+            response.Data.OrganizationId = user.OrganizationId;
             response.Data.Token = jWTservices.GenerateToken(user);
 
             return response;
@@ -85,6 +86,7 @@ namespace TaskManagerBackend.Services
 
             response.Data.UserName = user.UserName;
             response.Data.UserEmail = user.UserEmail;
+            response.Data.OrganizationId = user.OrganizationId;
             response.Data.Role = user.Role;
 
             return response;
@@ -107,6 +109,7 @@ namespace TaskManagerBackend.Services
                 response.Data!.UserName = user.UserName;
                 response.Data!.UserEmail = user.UserEmail;
                 response.Data!.Role = user.Role;
+                response.Data!.OrganizationId = user.OrganizationId;
 
                 return response;
             }
@@ -122,6 +125,7 @@ namespace TaskManagerBackend.Services
             response.Data.UserName = newUser.UserName;
             response.Data.UserEmail = newUser.UserEmail;
             response.Data.Role = newUser.Role;
+            response.Data.OrganizationId = newUser.OrganizationId;
 
             return response;
         }
