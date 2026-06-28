@@ -56,6 +56,7 @@ builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("D
 
 builder.Services.AddScoped<UserServices>();
 builder.Services.AddScoped<ProjectServices>();
+builder.Services.AddScoped<OrganizationServices>(); 
 builder.Services.AddScoped<JWTservices>();
 
 var app = builder.Build();
