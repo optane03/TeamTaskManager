@@ -22,7 +22,7 @@ namespace TaskManagerBackend.Services
         // Service to get all the member
         public async Task<List<UserSchema>> GetAllUserInfoAsync(string organizationId)
         {
-            return await userSchema.Find(all => all.Role == "Member" && all.OrganizationId == organizationId).ToListAsync();    
+            return await userSchema.Find(all => all.Role == "Developer" && all.OrganizationId == organizationId).ToListAsync();    
         }
 
 

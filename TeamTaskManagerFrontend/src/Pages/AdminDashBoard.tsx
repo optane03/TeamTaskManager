@@ -5,6 +5,8 @@ import dlt from "../Pictures/recycle-bin.png";
 import home from "../Pictures/home-button.png";
 import logout from "../Pictures/exit.png";
 
+const Url = import.meta.env.VITE_BACKEND_URL;
+
 interface Projects {
   id: string;
   projectName: string;
@@ -20,11 +22,11 @@ interface User {
   organizationId: string;
 }
 
-interface AllEmployees {
+interface Employee {
   id: string;
   userName: string;
   userEmail: string;
-  roll: string;
+  role: string;
   organizationId: string;
 }
 
@@ -37,11 +39,11 @@ const AdminDashBoard = () => {
   const navigate = useNavigate();
   const [allProjects, setAllProjects] = useState<Projects[]>([]);
   const [user, setUser] = useState<User>();
-  const [allEmployees, setAllEmployees] = useState<AllEmployees[]>([]);
+  const [allEmployees, setAllEmployees] = useState<Employee[]>([]);
   const [dashboardContent, setDashboardContent] = useState<DashBoardcontent>(DashBoardcontent.Projects);
 
   const fetchProjects = async (email: string) => {
-    const projectUrl = `http://localhost:5089/api/Project/GetAllProjectDetails?email=${email}`;
+    const projectUrl = Url + `Project/GetAllProjectDetails?email=${email}`;
     const projectResponse = await axios.get(projectUrl);
 
     setAllProjects(projectResponse.data.data);
@@ -49,7 +51,7 @@ const AdminDashBoard = () => {
   };
 
   const fetchUser = async (email: string) => {
-    const userUrl = `http://localhost:5089/api/User/GetUser?email=${email}`;
+    const userUrl = Url + `User/GetUser?email=${email}`;
     const userResponse = await axios.get(userUrl);
 
     const userData: User = {
@@ -65,12 +67,12 @@ const AdminDashBoard = () => {
   };
 
   const fetchAllEmployees = async (organizationId: string) => {
-    const employeesUrl = `http://localhost:5089/api/User/GetAllUser?organizationId=${organizationId}`;
+    const employeesUrl = Url + `User/GetAllUser?organizationId=${organizationId}`;
     const employeesResponse = await axios.get(employeesUrl);
 
-    setAllEmployees(employeesResponse.data.data);
+    setAllEmployees(employeesResponse.data);
     console.log("printing all employees:");
-    
+
     console.log(employeesResponse.data);
   };
 
@@ -118,7 +120,7 @@ const AdminDashBoard = () => {
         </div>
 
         {/* Projects Table */}
-        <div className="bg-white rounded-xl mt-3 border border-gray-300">
+        <div className={dashboardContent === DashBoardcontent.Projects ? `bg-white rounded-xl mt-3 border border-gray-300` : `hidden`}>
           <div className="bg-white rounded-2xl overflow-hidden">
 
             {/* Header */}
@@ -167,7 +169,75 @@ const AdminDashBoard = () => {
             </table>
           </div>
         </div>
+
+
+        {/* Employees Table */}
+        <div className={dashboardContent === DashBoardcontent.TeamMembers ? "bg-white rounded-xl mt-3 border border-gray-300" : "hidden"}>
+          <div className="bg-white rounded-2xl overflow-hidden">
+
+            {/* Header */}
+            <div className="px-4 py-3 border-b border-gray-300 flex justify-between items-center">
+              <h2 className="text-2xl font-bold text-gray-700">
+                Employees
+              </h2>
+
+              <button className="bg-[#1A1953] hover:bg-[#141343] text-white px-4 py-2 rounded-lg font-medium text-lg">
+                Add Employee
+              </button>
+            </div>
+
+            {/* Table */}
+            <table className="w-full text-left">
+              <thead className="bg-blue-100 text-gray-600 text-lg uppercase">
+                <tr>
+                  <th className="px-6 py-3">Name</th>
+                  <th className="px-6 py-3">Email</th>
+                  <th className="px-6 py-3">Role</th>
+                  <th className="px-6 py-3 text-center">Actions</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {allEmployees.length > 0 ? (
+                  allEmployees.map((employee) => (
+                    <tr key={employee.id}>
+                      <td className="px-6 py-2">{employee.userName}</td>
+
+                      <td className="px-6 py-2">
+                        {employee.userEmail}
+                      </td>
+
+                      <td className="px-6 py-2">
+                        {employee.role}
+                      </td>
+
+                      <td className="px-6 py-2 text-center">
+                        <img
+                          src={dlt}
+                          alt="Delete"
+                          className="m-auto w-7 h-7 cursor-pointer"
+                        />
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td
+                      colSpan={4}
+                      className="px-6 py-4 text-center text-gray-500"
+                    >
+                      No employees found.
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
+
+
+
     </div>
   )
 }
