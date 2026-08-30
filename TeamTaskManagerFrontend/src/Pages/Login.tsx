@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useFormik } from "formik";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Url = import.meta.env.VITE_BACKEND_URL;
 
@@ -31,23 +31,9 @@ const Login = () => {
         if (response.data.statusCode === 200) {
 
             setError("");
-
-            const token = response.data.data.token;
-
-            sessionStorage.setItem("token", token);
-
-            const payload = JSON.parse(atob(token.split(".")[1]));
+                
+            navigate("/projects");
             
-            const role =
-                payload[
-                "http://schemas.microsoft.com/ws/2008/06/identity/claims/role"
-                ];
-
-            if (role === "Admin") {
-                navigate("/adminDashBoard");
-            } else {
-                navigate("/userDashBoard");
-            }
         }
     }
 
@@ -90,10 +76,8 @@ const Login = () => {
                 {error && <p className="text-red-500 mt-5 font-bold text-[14px]">{error}</p>}
             </form>
 
-            <div className="mt-[5px]">
-                Don't have an account? Ask your authorization. <br />
-                or <br />
-                Go to <a href="/" className="font-bold text-[#0B2D72]">Home</a> Page
+            <div className={`smt-[5px] flex gap-1 justify-center items-center`}>
+                Don't have an account? <Link to="/register"><p className="text-[#0B2D72] font-bold cursor-pointer">Register</p></Link>
             </div>
         </div>
     )

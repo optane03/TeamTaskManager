@@ -19,20 +19,13 @@ namespace TaskManagerBackend.Services
         }
 
 
-        // Service to get all the member
-        public async Task<List<UserSchema>> GetAllUserInfoAsync(string organizationId)
-        {
-            return await userSchema.Find(all => all.Role == "Developer" && all.OrganizationId == organizationId).ToListAsync();    
-        }
-
-
         // Service to login user
-        public async Task<ApiResponse<UserDetailsDTO>> GetUserLoginInfoAsync(UserLoginDTO loginDTO)
+        public async Task<ApiResponse<UserSchema>> GetUserLoginInfoAsync(UserLoginDTO loginDTO)
         {
             UserSchema user =  await userSchema.Find(u => u.UserEmail == loginDTO.Email).FirstOrDefaultAsync();
 
-            ApiResponse<UserDetailsDTO> response = new();
-            response.Data = new UserDetailsDTO();
+            ApiResponse<UserSchema> response = new();
+            response.Data = new UserSchema();
 
             if (user == null)
             {
@@ -55,11 +48,8 @@ namespace TaskManagerBackend.Services
             response.StatusCode = 200;
             response.Message = "User found";
 
-            response.Data.UserName = user.UserName;
-            response.Data.UserEmail = user.UserEmail;
-            response.Data.Role = user.Role;
-            response.Data.OrganizationId = user.OrganizationId;
-            response.Data.Token = jWTservices.GenerateToken(user);
+            response.Data = user;
+            var Token = jWTservices.GenerateToken(user);
 
             return response;
         } 
@@ -86,8 +76,6 @@ namespace TaskManagerBackend.Services
 
             response.Data.UserName = user.UserName;
             response.Data.UserEmail = user.UserEmail;
-            response.Data.OrganizationId = user.OrganizationId;
-            response.Data.Role = user.Role;
 
             return response;
         }
@@ -108,8 +96,6 @@ namespace TaskManagerBackend.Services
 
                 response.Data!.UserName = user.UserName;
                 response.Data!.UserEmail = user.UserEmail;
-                response.Data!.Role = user.Role;
-                response.Data!.OrganizationId = user.OrganizationId;
 
                 return response;
             }
@@ -124,8 +110,6 @@ namespace TaskManagerBackend.Services
 
             response.Data.UserName = newUser.UserName;
             response.Data.UserEmail = newUser.UserEmail;
-            response.Data.Role = newUser.Role;
-            response.Data.OrganizationId = newUser.OrganizationId;
 
             return response;
         }

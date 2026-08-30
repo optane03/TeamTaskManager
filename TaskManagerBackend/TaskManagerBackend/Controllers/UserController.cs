@@ -11,17 +11,12 @@ namespace TaskManagerBackend.Controllers
     public class UserController : ControllerBase
     {
         private readonly UserServices userServices;
+        private readonly JWTservices jwtServices;
 
-        public UserController(UserServices userServices)
+        public UserController(UserServices userServices, JWTservices jwtServices)
         {
             this.userServices = userServices;
-        }
-
-
-        [HttpGet("GetAllUser")]
-        public async Task<List<UserSchema>> GetAllUserAsync(string organizationId)
-        {
-            return await userServices.GetAllUserInfoAsync(organizationId);
+            this.jwtServices = jwtServices;
         }
 
 
@@ -46,6 +41,7 @@ namespace TaskManagerBackend.Controllers
         public async Task<ApiResponse<UserDetailsDTO>> LoginUser(UserLoginDTO user)
         {
             var response = new ApiResponse<UserDetailsDTO>();
+            response.Data = new UserDetailsDTO();
 
             if (string.IsNullOrEmpty(user.Email) || string.IsNullOrEmpty(user.Password)) 
             {
@@ -55,7 +51,28 @@ namespace TaskManagerBackend.Controllers
                 return response;
             }
 
-            return await userServices.GetUserLoginInfoAsync(user);
+            var existUser = await userServices.GetUserLoginInfoAsync(user);
+
+            response.StatusCode = existUser.StatusCode;
+            response.Message = existUser.Message;
+
+            if (existUser.Data != null)
+            {
+                response.Data.UserEmail = existUser.Data.UserEmail;
+                response.Data.UserName = existUser.Data.UserName;
+
+                var token = jwtServices.GenerateToken(existUser.Data);
+
+                Response.Cookies.Append("accessToken", token, new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = true,
+                    SameSite = SameSiteMode.None,
+                    Expires = DateTimeOffset.UtcNow.AddDays(1)
+                });
+            }
+
+            return response;
         }
 
 
@@ -64,7 +81,7 @@ namespace TaskManagerBackend.Controllers
         {
             var response = new ApiResponse<UserDetailsDTO>();
 
-            if (string.IsNullOrEmpty(user.UserName) || string.IsNullOrEmpty(user.UserEmail) || string.IsNullOrEmpty(user.UserPassword) || string.IsNullOrEmpty(user.Role))
+            if (string.IsNullOrEmpty(user.UserName) || string.IsNullOrEmpty(user.UserEmail) || string.IsNullOrEmpty(user.UserPassword) )
             {
                 response.StatusCode = 400;
                 response.Message = "Please enter all the fields";
@@ -72,7 +89,10 @@ namespace TaskManagerBackend.Controllers
                 return response;
             }
 
-            return await userServices.RegisterUser(user);
+            response = await userServices.RegisterUser(user);
+
+
+            return response;
         }
     }
 }

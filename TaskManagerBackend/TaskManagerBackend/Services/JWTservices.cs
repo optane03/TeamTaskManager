@@ -27,9 +27,8 @@ namespace TaskManagerBackend.Services
             var claims = new[]
             {
             new Claim(ClaimTypes.NameIdentifier, user.Id!),
-            new Claim(ClaimTypes.Email, user.UserEmail),
-            new Claim(ClaimTypes.Role, user.Role)
-        };
+            new Claim(ClaimTypes.Email, user.UserEmail)
+            };
 
             var token = new JwtSecurityToken(
                 issuer: jwtSettings["Issuer"],
