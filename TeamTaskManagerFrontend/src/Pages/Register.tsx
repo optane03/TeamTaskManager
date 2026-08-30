@@ -9,16 +9,12 @@ interface RegisterProps {
     userName: string,
     userEmail: string,
     userPassword: string,
-    role: string,
-    organizationId: string
 }
 
 const defaultRegisterProps: RegisterProps = {
     userName: "",
     userEmail: "",
-    userPassword: "",
-    role: "",
-    organizationId: "Company@123"
+    userPassword: ""
 }
 
 const Register = () => {
@@ -86,22 +82,6 @@ const Register = () => {
                         onBlur={formik.handleBlur}
                         className="bg-gray-100 rounded py-2 px-4 outline-none w-full"
                     />
-                </div>
-
-                <div className="mt-5 flex gap-5 items-center px-5">
-                    <label className="w-[150px] text-left text-xl">Role:</label>
-                    <select
-                        name="role"
-                        value={formik.values.role}
-                        onChange={formik.handleChange}
-                        onBlur={formik.handleBlur}
-                        className="bg-gray-100 rounded py-2 px-4 outline-none w-full"
-                    >
-                        <option value="">Select Role</option>
-                        <option value="Admin">Admin</option>
-                        <option value="Member">Member</option>
-                        <option value="Teamlead">Team Leader</option>
-                    </select>
                 </div>
 
                 <button type="submit" className="bg-[#0B2D72] text-white font-bold text-xl py-2 px-4 rounded mt-15 w-[150px]">Register</button>
