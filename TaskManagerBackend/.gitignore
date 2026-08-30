@@ -1,0 +1,70 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio
+.vs/
+*.user
+*.userossc
+*.suo
+*.userprefs
+
+# Visual Studio Code
+.vscode/
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Logs
+*.log
+logs/
+
+# Test results
+TestResults/
+*.trx
+
+# Publish output
+publish/
+[Oo]ut/
+
+# ASP.NET Core secrets
+appsettings.Development.json
+appsettings.Local.json
+
+# User secrets
+secrets.json
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Coverage
+coverage/
+coverage*.json
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+
+# Generated files
+Generated/
