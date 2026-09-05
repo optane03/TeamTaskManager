@@ -49,7 +49,6 @@ namespace TaskManagerBackend.Services
             response.Message = "User found";
 
             response.Data = user;
-            var Token = jWTservices.GenerateToken(user);
 
             return response;
         } 

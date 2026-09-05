@@ -15,7 +15,7 @@ namespace TaskManagerBackend.Services
             _config = config;
         }
 
-        public string GenerateToken(UserSchema user)
+        public string GenerateToken(string userId, string userEmail)
         {
             var jwtSettings = _config.GetSection("Jwt");
             var key = new SymmetricSecurityKey(
@@ -26,8 +26,8 @@ namespace TaskManagerBackend.Services
 
             var claims = new[]
             {
-            new Claim(ClaimTypes.NameIdentifier, user.Id!),
-            new Claim(ClaimTypes.Email, user.UserEmail)
+                new Claim(ClaimTypes.NameIdentifier, userId),
+                new Claim(ClaimTypes.Email, userEmail)
             };
 
             var token = new JwtSecurityToken(

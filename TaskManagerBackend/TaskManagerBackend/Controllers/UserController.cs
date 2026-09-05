@@ -56,12 +56,12 @@ namespace TaskManagerBackend.Controllers
             response.StatusCode = existUser.StatusCode;
             response.Message = existUser.Message;
 
-            if (existUser.Data != null)
+            if (existUser.Data != null && existUser.Data.Id != null && existUser.Data.UserEmail != null)
             {
                 response.Data.UserEmail = existUser.Data.UserEmail;
                 response.Data.UserName = existUser.Data.UserName;
 
-                var token = jwtServices.GenerateToken(existUser.Data);
+                var token = jwtServices.GenerateToken(existUser.Data.Id, existUser.Data.UserEmail);
 
                 Response.Cookies.Append("accessToken", token, new CookieOptions
                 {
