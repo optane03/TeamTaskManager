@@ -1,3 +1,4 @@
+import { Spin } from "antd";
 import axios from "axios";
 import { useFormik } from "formik";
 import { useState } from "react";
@@ -16,31 +17,30 @@ const defaultLoginProps: LoginProps = {
 }
 
 const Login = () => {
-    const [error, setError] = useState<string | null>(null);
+    const [error, setError] = useState<string | null>(null)
+    const [spin, setSpin] = useState(false)
 
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     const HandleLogin = async (values: LoginProps) => {
-
-        const response = await axios.post(Url + "User/Login", values);
+        const response = await axios.post(Url + "User/Login", values)
+        setSpin(false)
 
         if (response.data.statusCode === 404 || response.data.statusCode === 400) {
             setError(response.data.message);
         }
 
         if (response.data.statusCode === 200) {
-
-            setError("");
-                
-            navigate("/projects");
-            
+            setError("")
+            navigate("/projects")
         }
     }
 
     const formik = useFormik({
         initialValues: defaultLoginProps,
         onSubmit: (values: LoginProps) => {
-            HandleLogin(values);
+            setSpin(true)
+            HandleLogin(values)
         }
     })
 
@@ -72,7 +72,7 @@ const Login = () => {
                     />
                 </div>
 
-                <button type="submit" className="bg-[#0B2D72] text-white font-bold text-xl py-2 px-4 rounded mt-10 w-[150px]">Login</button>
+                <button type="submit" className="bg-[#0B2D72] text-white font-bold text-xl py-2 px-4 rounded mt-10 w-[150px]">{spin ? <Spin></Spin> : 'Login'}</button>
                 {error && <p className="text-red-500 mt-5 font-bold text-[14px]">{error}</p>}
             </form>
 

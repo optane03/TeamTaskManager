@@ -19,12 +19,12 @@ namespace TaskManagerBackend.Services
 
 
         // Service to get all the projects created by a particular admin
-        public async Task<ApiResponse<List<ProjectSchema>>> GetAllProjectDetailsAsync(string adminEmail)
+        public async Task<ApiResponse<List<ProjectSchema>>> GetAllProjectDetailsAsync(string userEmail)
         {
             ApiResponse<List<ProjectSchema>> response = new();
             response.Data = new List<ProjectSchema>();
 
-            response.Data = await projectSchema.Find(prj => prj.AdminEmail == adminEmail).ToListAsync();
+            response.Data = await projectSchema.Find(prj => prj.UserEmail == userEmail).ToListAsync();
             response.StatusCode = 200;
             response.Message = "Found All Project";
 
@@ -65,7 +65,6 @@ namespace TaskManagerBackend.Services
             ProjectSchema prj = await this.projectSchema.Find(prj => prj.ProjectName == projectSchema.ProjectName).FirstOrDefaultAsync();
 
             response.Data.ProjectName = projectSchema.ProjectName;
-            response.Data.AdminEmail = projectSchema.AdminEmail;
 
             if (prj != null) 
             {
@@ -79,6 +78,72 @@ namespace TaskManagerBackend.Services
             response.Message = "Project Created";
 
             await this.projectSchema.InsertOneAsync(projectSchema);
+
+            return response;
+        }
+
+
+        // Service to update a project
+        public async Task<ApiResponse<string>> UpdateProject(ProjectUpdationDTO project)
+        {
+            ApiResponse<string> response = new();
+
+            ProjectSchema prj = await projectSchema.Find(prj => prj.Id == project.Id).FirstOrDefaultAsync();
+
+            if (prj == null)
+            {
+                response.StatusCode = 404;
+                response.Message = "Project Not Found";
+
+                return response;
+            }
+
+            if (string.IsNullOrEmpty(project.Id)) 
+            {
+                response.StatusCode = 400;
+                response.Message = "Project id is missing";
+            }
+
+            var filter = Builders<ProjectSchema>.Filter.Eq(prj => prj.Id, project.Id);
+
+            var update = Builders<ProjectSchema>.Update
+                .Set(prj => prj.ProjectName, project.ProjectName)
+                .Set(prj => prj.ProjectStatus, project.ProjectStatus);
+
+            await projectSchema.UpdateOneAsync(filter, update);
+
+            response.StatusCode = 200;
+            response.Message = "Project updated successfully";
+
+            return response;
+        }
+
+
+        // Service to delete a project
+        public async Task<ApiResponse<string>> DeleteProject(string projectId)
+        {
+            ApiResponse<string> response = new();
+
+            ProjectSchema prj = await projectSchema.Find(prj => prj.Id == projectId).FirstOrDefaultAsync();
+
+            if (prj == null)
+            {
+                response.StatusCode = 404;
+                response.Message = "Project Not Found";
+
+                return response;
+            }
+
+            if (string.IsNullOrEmpty(projectId))
+            {
+                response.StatusCode = 400;
+                response.Message = "Project id is required";
+            }
+
+            await projectSchema.DeleteOneAsync(pr => pr.Id == projectId);
+
+            response.StatusCode = 200;
+            response.Message = "Project is deleted";
 
             return response;
         }

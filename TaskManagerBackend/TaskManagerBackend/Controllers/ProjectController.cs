@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using TaskManagerBackend.DTO;
 using TaskManagerBackend.Errors;
 using TaskManagerBackend.Models;
@@ -8,6 +10,7 @@ namespace TaskManagerBackend.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize(AuthenticationSchemes = "Bearer")]
     public class ProjectController : ControllerBase
     {
         private readonly ProjectServices projectServices;
@@ -19,9 +22,10 @@ namespace TaskManagerBackend.Controllers
 
 
         [HttpGet("GetAllProjectDetails")]
-        public async Task<ApiResponse<List<ProjectSchema>>> GetAllProjectDeatails(string email)
+        public async Task<ApiResponse<List<ProjectSchema>>> GetAllProjectDeatails()
         {
-            return await  projectServices.GetAllProjectDetailsAsync(email);
+            string userEmail = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+            return await  projectServices.GetAllProjectDetailsAsync(userEmail);
         }
 
 
@@ -33,11 +37,11 @@ namespace TaskManagerBackend.Controllers
 
 
         [HttpPost("CreateProject")]
-        public async Task<ApiResponse<ProjectCreationDetailsDTO>> CreateProject(ProjectSchema prj)
+        public async Task<ApiResponse<ProjectCreationDetailsDTO>> CreateProject(ProjectCreationDetailsDTO prj)
         {
             ApiResponse<ProjectCreationDetailsDTO> response = new();
-            
-            if(string.IsNullOrEmpty(prj.ProjectName) || string.IsNullOrEmpty(prj.AdminEmail) || prj.ProjectMembers.Length == 0)
+
+            if(string.IsNullOrEmpty(prj.ProjectName))
             {
                 response.StatusCode = 400;
                 response.Message = "Enter All The Fields";
@@ -45,7 +49,28 @@ namespace TaskManagerBackend.Controllers
                 return response;
             }
 
-            return await projectServices.CreateNewProjectAsync(prj);
+            string userEmail = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+            
+            ProjectSchema projectSchema = new ProjectSchema();
+
+            projectSchema.ProjectName = prj.ProjectName;
+            projectSchema.UserEmail = userEmail;
+
+            return await projectServices.CreateNewProjectAsync(projectSchema);
+        }
+
+
+        [HttpPost("Update")]
+        public async Task<ApiResponse<string>> UpdateProject(ProjectUpdationDTO project)
+        {
+            return await projectServices.UpdateProject(project);
+        }
+
+
+        [HttpPost("Delete")]
+        public async Task<ApiResponse<string>> DeleteProject(string projectId)
+        {
+            return await projectServices.DeleteProject(projectId);
         }
     }
 }

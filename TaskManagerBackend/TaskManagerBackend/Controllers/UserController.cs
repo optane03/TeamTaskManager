@@ -62,6 +62,7 @@ namespace TaskManagerBackend.Controllers
                 response.Data.UserName = existUser.Data.UserName;
 
                 var token = jwtServices.GenerateToken(existUser.Data.Id, existUser.Data.UserEmail);
+                Console.WriteLine(token);
 
                 Response.Cookies.Append("accessToken", token, new CookieOptions
                 {

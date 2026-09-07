@@ -1,14 +1,13 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 
-namespace TaskManagerBackend.Models
+namespace TaskManagerBackend.DTO
 {
-    public class ProjectSchema
+    public class ProjectUpdationDTO
     {
         [BsonId]
         [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
-        public string? Id {  get; set; }
+        public string? Id { get; set; }
         public string ProjectName { get; set; }
-        public string UserEmail { get; set; }
         public string ProjectStatus { get; set; } = "In Progress";
     }
 }
