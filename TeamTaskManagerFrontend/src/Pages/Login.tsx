@@ -3,6 +3,7 @@ import axios from "axios";
 import { useFormik } from "formik";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import axiosRequest from "../Utils/AxiosRequest";
 
 const Url = import.meta.env.VITE_BACKEND_URL;
 
@@ -12,8 +13,8 @@ interface LoginProps {
 }
 
 const defaultLoginProps: LoginProps = {
-    email: "",
-    password: ""
+    email: "tanay@gmail.com",
+    password: "12345"
 }
 
 const Login = () => {
@@ -23,7 +24,7 @@ const Login = () => {
     const navigate = useNavigate()
 
     const HandleLogin = async (values: LoginProps) => {
-        const response = await axios.post(Url + "User/Login", values)
+        const response = await axiosRequest.post("User/Login", values)
         setSpin(false)
 
         if (response.data.statusCode === 404 || response.data.statusCode === 400) {

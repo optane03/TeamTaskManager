@@ -1,7 +1,4 @@
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
-
-const navigate = useNavigate();
 
 const axiosRequest = axios.create({
     baseURL: import.meta.env.VITE_BACKEND_URL,
@@ -14,9 +11,9 @@ axiosRequest.interceptors.response.use(
         return response;
     },
     (error) => {
+        console.log(error.status    )
         if (error.response?.status == 401) {
-            localStorage.removeItem('token')
-            navigate("/")
+            // window.location.href = "/"
         }
 
         return Promise.reject(error);

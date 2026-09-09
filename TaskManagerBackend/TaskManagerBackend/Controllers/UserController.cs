@@ -67,8 +67,8 @@ namespace TaskManagerBackend.Controllers
                 Response.Cookies.Append("accessToken", token, new CookieOptions
                 {
                     HttpOnly = true,
-                    Secure = true,
-                    SameSite = SameSiteMode.None,
+                    Secure = false,
+                    SameSite = SameSiteMode.Lax,
                     Expires = DateTimeOffset.UtcNow.AddDays(1)
                 });
             }
