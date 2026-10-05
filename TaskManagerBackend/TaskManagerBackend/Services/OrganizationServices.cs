@@ -18,10 +18,10 @@ namespace TaskManagerBackend.Services
 
 
         // Service to get all the organization
-        public async Task<ApiResponse<List<OrganizationSchema>>> GetAllOrganizationDetailsAsync()
+        public async Task<ApiResponseWithData<List<OrganizationSchema>>> GetAllOrganizationDetailsAsync()
         {
             var organizations = await organizationSchema.Find(organization => true).ToListAsync();
-            ApiResponse<List<OrganizationSchema>> response = new();
+            ApiResponseWithData<List<OrganizationSchema>> response = new();
 
             response.StatusCode = 200;
             response.Message = "All organizations";
@@ -32,10 +32,10 @@ namespace TaskManagerBackend.Services
 
 
         // Service to get an organization
-        public async Task<ApiResponse<OrganizationSchema>> GetOrganaizationDetailsAsync(string id)
+        public async Task<ApiResponseWithData<OrganizationSchema>> GetOrganaizationDetailsAsync(string id)
         {
             var organization = await organizationSchema.Find(org => org.Id == id).FirstOrDefaultAsync();
-            ApiResponse<OrganizationSchema> response = new();
+            ApiResponseWithData<OrganizationSchema> response = new();
 
             if(organization ==  null)
             {
@@ -54,9 +54,9 @@ namespace TaskManagerBackend.Services
 
 
         // Service to register organization
-        public async Task<ApiResponse<OrganizationCreationDetaisDTO>> RegisterOrganizationAsync(OrganizationSchema organization)
+        public async Task<ApiResponseWithData<OrganizationCreationDetaisDTO>> RegisterOrganizationAsync(OrganizationSchema organization)
         {
-            ApiResponse<OrganizationCreationDetaisDTO> response = new();
+            ApiResponseWithData<OrganizationCreationDetaisDTO> response = new();
             response.Data = new OrganizationCreationDetaisDTO();
 
             var organizationExist = organizationSchema.Find(org => org.Id == organization.Id).FirstOrDefault();

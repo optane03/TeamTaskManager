@@ -21,9 +21,9 @@ namespace TaskManagerBackend.Controllers
 
 
         [HttpGet("GetUser")]
-        public async Task<ApiResponse<UserDetailsDTO>> GetUserasync(string email)
+        public async Task<ApiResponseWithData<UserDetailsDTO>> GetUserasync(string email)
         {
-            ApiResponse<UserDetailsDTO> response = new();
+            ApiResponseWithData<UserDetailsDTO> response = new();
 
             if (string.IsNullOrEmpty(email))
             {
@@ -38,9 +38,9 @@ namespace TaskManagerBackend.Controllers
 
 
         [HttpPost("Login")]
-        public async Task<ApiResponse<UserDetailsDTO>> LoginUser(UserLoginDTO user)
+        public async Task<ApiResponseWithData<UserDetailsDTO>> LoginUser(UserLoginDTO user)
         {
-            var response = new ApiResponse<UserDetailsDTO>();
+            var response = new ApiResponseWithData<UserDetailsDTO>();
             response.Data = new UserDetailsDTO();
 
             if (string.IsNullOrEmpty(user.Email) || string.IsNullOrEmpty(user.Password)) 
@@ -78,9 +78,9 @@ namespace TaskManagerBackend.Controllers
 
 
         [HttpPost("Register")]
-        public async Task<ApiResponse<UserDetailsDTO>> RegisterUser(UserSchema user)
+        public async Task<ApiResponseWithData<UserDetailsDTO>> RegisterUser(UserSchema user)
         {
-            var response = new ApiResponse<UserDetailsDTO>();
+            var response = new ApiResponseWithData<UserDetailsDTO>();
 
             if (string.IsNullOrEmpty(user.UserName) || string.IsNullOrEmpty(user.UserEmail) || string.IsNullOrEmpty(user.UserPassword) )
             {

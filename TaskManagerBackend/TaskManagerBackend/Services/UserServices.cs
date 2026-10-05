@@ -20,11 +20,11 @@ namespace TaskManagerBackend.Services
 
 
         // Service to login user
-        public async Task<ApiResponse<UserSchema>> GetUserLoginInfoAsync(UserLoginDTO loginDTO)
+        public async Task<ApiResponseWithData<UserSchema>> GetUserLoginInfoAsync(UserLoginDTO loginDTO)
         {
             UserSchema user =  await userSchema.Find(u => u.UserEmail == loginDTO.Email).FirstOrDefaultAsync();
 
-            ApiResponse<UserSchema> response = new();
+            ApiResponseWithData<UserSchema> response = new();
             response.Data = new UserSchema();
 
             if (user == null)
@@ -55,11 +55,11 @@ namespace TaskManagerBackend.Services
 
 
         // Service to get user info
-        public async Task<ApiResponse<UserDetailsDTO>> GetUserDetailsAsync(string email)
+        public async Task<ApiResponseWithData<UserDetailsDTO>> GetUserDetailsAsync(string email)
         {
             UserSchema user = await userSchema.Find(us => us.UserEmail == email).FirstOrDefaultAsync();
 
-            ApiResponse<UserDetailsDTO> response = new();
+            ApiResponseWithData<UserDetailsDTO> response = new();
             response.Data = new UserDetailsDTO();
 
             if (user == null) 
@@ -81,11 +81,11 @@ namespace TaskManagerBackend.Services
 
 
         // Service to register user
-        public async Task<ApiResponse<UserDetailsDTO>> RegisterUser(UserSchema newUser)
+        public async Task<ApiResponseWithData<UserDetailsDTO>> RegisterUser(UserSchema newUser)
         {
             UserSchema user = await userSchema.Find(u => u.UserEmail == newUser.UserEmail).FirstOrDefaultAsync();
 
-            ApiResponse<UserDetailsDTO> response = new();            
+            ApiResponseWithData<UserDetailsDTO> response = new();            
             response.Data = new UserDetailsDTO();
 
             if (user != null)

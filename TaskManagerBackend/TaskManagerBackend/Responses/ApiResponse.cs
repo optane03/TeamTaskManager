@@ -1,9 +1,8 @@
-﻿namespace TaskManagerBackend.Errors
+﻿namespace TaskManagerBackend.Responses
 {
-    public class ApiResponse<T>
+    public class ApiResponse
     {
         public int StatusCode { get; set; }
         public string Message { get; set; }
-        public T? Data { get; set; }
     }
 }

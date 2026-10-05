@@ -4,6 +4,7 @@ using System.Security.Claims;
 using TaskManagerBackend.DTO;
 using TaskManagerBackend.Errors;
 using TaskManagerBackend.Models;
+using TaskManagerBackend.Responses;
 using TaskManagerBackend.Services;
 
 namespace TaskManagerBackend.Controllers
@@ -22,7 +23,7 @@ namespace TaskManagerBackend.Controllers
 
 
         [HttpGet("GetAllProjectDetails")]
-        public async Task<ApiResponse<List<ProjectSchema>>> GetAllProjectDeatails()
+        public async Task<ApiResponseWithData<List<ProjectSchema>>> GetAllProjectDeatails()
         {
             string userEmail = User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
             return await  projectServices.GetAllProjectDetailsAsync(userEmail);
@@ -30,16 +31,16 @@ namespace TaskManagerBackend.Controllers
 
 
         [HttpGet("GetProjectDetails")]
-        public async Task<ApiResponse<ProjectSchema>> GetProjectDetails(string projectId)
+        public async Task<ApiResponseWithData<ProjectSchema>> GetProjectDetails(string projectId)
         {
             return await projectServices.GetProjectDetailsAsync(projectId);
         }
 
 
         [HttpPost("CreateProject")]
-        public async Task<ApiResponse<ProjectCreationDetailsDTO>> CreateProject(ProjectCreationDetailsDTO prj)
+        public async Task<ApiResponseWithData<ProjectCreationDetailsDTO>> CreateProject(ProjectCreationDetailsDTO prj)
         {
-            ApiResponse<ProjectCreationDetailsDTO> response = new();
+            ApiResponseWithData<ProjectCreationDetailsDTO> response = new();
 
             if(string.IsNullOrEmpty(prj.ProjectName))
             {
@@ -61,14 +62,14 @@ namespace TaskManagerBackend.Controllers
 
 
         [HttpPost("Update")]
-        public async Task<ApiResponse<string>> UpdateProject(ProjectUpdationDTO project)
+        public async Task<ApiResponse> UpdateProject(ProjectUpdationDTO project)
         {
             return await projectServices.UpdateProject(project);
         }
 
 
         [HttpPost("Delete")]
-        public async Task<ApiResponse<string>> DeleteProject(string projectId)
+        public async Task<ApiResponse> DeleteProject(string projectId)
         {
             return await projectServices.DeleteProject(projectId);
         }

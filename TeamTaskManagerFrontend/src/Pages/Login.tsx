@@ -1,11 +1,8 @@
 import { Spin } from "antd";
-import axios from "axios";
 import { useFormik } from "formik";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axiosRequest from "../Utils/AxiosRequest";
-
-const Url = import.meta.env.VITE_BACKEND_URL;
 
 interface LoginProps {
     email: string,

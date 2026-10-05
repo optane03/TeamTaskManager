@@ -19,23 +19,23 @@ namespace TaskManagerBackend.Controllers
         }
 
         [HttpGet("GetAllOrganizationDetails")]
-        public async Task<ApiResponse<List<OrganizationSchema>>> GetAllOrganizationDetails()
+        public async Task<ApiResponseWithData<List<OrganizationSchema>>> GetAllOrganizationDetails()
         {
             return await organizationServices.GetAllOrganizationDetailsAsync();
         }
 
 
         [HttpGet("GetOrganizationDetails")]
-        public async Task<ApiResponse<OrganizationSchema>> GetOrganizationDetails(string organizationId)
+        public async Task<ApiResponseWithData<OrganizationSchema>> GetOrganizationDetails(string organizationId)
         {
             return await organizationServices.GetOrganaizationDetailsAsync(organizationId);
         }
 
 
         [HttpPost("RegisterOrganization")]
-        public async Task<ApiResponse<OrganizationCreationDetaisDTO>> RegisterOrganization(OrganizationSchema schema)
+        public async Task<ApiResponseWithData<OrganizationCreationDetaisDTO>> RegisterOrganization(OrganizationSchema schema)
         {
-            ApiResponse<OrganizationCreationDetaisDTO> response = new();
+            ApiResponseWithData<OrganizationCreationDetaisDTO> response = new();
             
             if (string.IsNullOrEmpty(schema.Name) || string.IsNullOrEmpty(schema.Description) || string.IsNullOrEmpty(schema.Password))
             {

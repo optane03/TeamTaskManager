@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TaskManagerBackend.DTO;
 using TaskManagerBackend.Errors;
 using TaskManagerBackend.Models;
+using TaskManagerBackend.Responses;
 
 namespace TaskManagerBackend.Services
 {
@@ -19,9 +20,9 @@ namespace TaskManagerBackend.Services
 
 
         // Service to get all the projects created by a particular admin
-        public async Task<ApiResponse<List<ProjectSchema>>> GetAllProjectDetailsAsync(string userEmail)
+        public async Task<ApiResponseWithData<List<ProjectSchema>>> GetAllProjectDetailsAsync(string userEmail)
         {
-            ApiResponse<List<ProjectSchema>> response = new();
+            ApiResponseWithData<List<ProjectSchema>> response = new();
             response.Data = new List<ProjectSchema>();
 
             response.Data = await projectSchema.Find(prj => prj.UserEmail == userEmail).ToListAsync();
@@ -33,11 +34,11 @@ namespace TaskManagerBackend.Services
 
 
         // Service to get a particullar project details
-        public async Task<ApiResponse<ProjectSchema>> GetProjectDetailsAsync(string projectId)
+        public async Task<ApiResponseWithData<ProjectSchema>> GetProjectDetailsAsync(string projectId)
         {
             ProjectSchema prj = await projectSchema.Find(prj => prj.Id == projectId).FirstOrDefaultAsync();
 
-            ApiResponse<ProjectSchema> response = new();
+            ApiResponseWithData<ProjectSchema> response = new();
             response.Data = new ProjectSchema();
 
             if (prj == null)
@@ -57,9 +58,9 @@ namespace TaskManagerBackend.Services
 
 
         // Srvice to create a new project
-        public async Task<ApiResponse<ProjectCreationDetailsDTO>> CreateNewProjectAsync(ProjectSchema projectSchema)
+        public async Task<ApiResponseWithData<ProjectCreationDetailsDTO>> CreateNewProjectAsync(ProjectSchema projectSchema)
         {
-            ApiResponse<ProjectCreationDetailsDTO> response = new();
+            ApiResponseWithData<ProjectCreationDetailsDTO> response = new();
             response.Data = new ProjectCreationDetailsDTO();
 
             ProjectSchema prj = await this.projectSchema.Find(prj => prj.ProjectName == projectSchema.ProjectName).FirstOrDefaultAsync();
@@ -84,9 +85,9 @@ namespace TaskManagerBackend.Services
 
 
         // Service to update a project
-        public async Task<ApiResponse<string>> UpdateProject(ProjectUpdationDTO project)
+        public async Task<ApiResponse> UpdateProject(ProjectUpdationDTO project)
         {
-            ApiResponse<string> response = new();
+            ApiResponse response = new();
 
             ProjectSchema prj = await projectSchema.Find(prj => prj.Id == project.Id).FirstOrDefaultAsync();
 
@@ -102,13 +103,22 @@ namespace TaskManagerBackend.Services
             {
                 response.StatusCode = 400;
                 response.Message = "Project id is missing";
+
+                return response;
             }
 
             var filter = Builders<ProjectSchema>.Filter.Eq(prj => prj.Id, project.Id);
 
-            var update = Builders<ProjectSchema>.Update
-                .Set(prj => prj.ProjectName, project.ProjectName)
-                .Set(prj => prj.ProjectStatus, project.ProjectStatus);
+            var updateBuilder = Builders<ProjectSchema>.Update;
+            var updates = new List<UpdateDefinition<ProjectSchema>>();
+
+            if (project.ProjectName != null)
+                updates.Add(updateBuilder.Set(prj => prj.ProjectName, project.ProjectName));
+
+            if (project.ProjectStatus != null)
+                updates.Add(updateBuilder.Set(prj => prj.ProjectStatus, project.ProjectStatus));
+
+            var update = updateBuilder.Combine(updates);
 
             await projectSchema.UpdateOneAsync(filter, update);
 
@@ -120,9 +130,9 @@ namespace TaskManagerBackend.Services
 
 
         // Service to delete a project
-        public async Task<ApiResponse<string>> DeleteProject(string projectId)
+        public async Task<ApiResponse> DeleteProject(string projectId)
         {
-            ApiResponse<string> response = new();
+            ApiResponse response = new();
 
             ProjectSchema prj = await projectSchema.Find(prj => prj.Id == projectId).FirstOrDefaultAsync();
 
